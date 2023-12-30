@@ -1,0 +1,291 @@
+---
+import MasterLayout from "../layouts/MasterLayout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { getCollection } from "astro:content";
+
+// console.log(filteredPosts);
+---
+
+
+<MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+		<style>
+		  #hero {
+			background-image: url(https://maarifaa.org/wp-content/uploads/2023/08/1.jpg);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		  }
+		</style>
+
+		<div id="hero" style="padding: 10rem 0rem;">
+		  <div class="container">
+			<div class="row">
+			  <div class="col-12">
+				<h1 class="text-wrap mx-4">
+				  Knowledge Sharing<br> Ecosystem Between India<br> & Africa.
+				</h1>
+				<p class="mx-4" style="font-size: 25px; text-decoration:solid;">Evolving Together Across All Horizons</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	
+		<div style="background-color: #283A8E">
+		  <div class="container rounded p-5">
+			<div class="row">
+			  <div class="col-md-6 col-sm-12 my-3 text-white">
+				<h2>What do we do</h2>
+				<p>Join us in enabling African persons in India and Africa, fostering holistic
+				  development, academic success, and cultural integration. Our vision is to create influential
+				  ambassadors of positive change, equipped with leadership skills and a passion for community
+				  impact. Our commitment is to providing comprehensive support in careers, ensuring quality
+				  education, nurturing cross-cultural connections, and fostering positive impact within
+				  communities.</p>
+	
+				<p class="">Ready to learn more? Dive into our mission and discover how Maarifaa is
+				  making a meaningful difference in the lives of African people.</p>
+	
+				<button type="button" class="btn btn-warning m-3">ABOUT ->
+				</button>
+			  </div>
+			  <div class="col-md-6 col-sm-12 my-3">
+				<img src="https://maarifaa.org/wp-content/uploads/2023/08/icom.jpg" alt="content-1"
+				  class="img-fluid rounded">
+			  </div>
+			</div>
+		  </div>
+		</div>
+	
+		<div class="container my-5 p-5" style="background-color: #F1DDDB;">
+		  <div class="row">
+			<div class="col-12 mt-5">
+			  <div class="text-center">
+				<h3 class="mb-3">Our Team</h3>
+				<p class="text-center mb-5">Our dynamic team at Maarifaa is
+				  composed of individuals from various backgrounds and disciplines, united by a common goal: to
+				  empower people like you. We believe in transforming lives globally!</p>
+			  </div>
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="col-md-3 mb-3">
+			  <div class="card">
+				<img src="https://maarifaa.org/wp-content/uploads/2023/09/Venkat-Photo-e1697879627271.jpg"
+				  class="card-img-top" alt="Person 1" style="padding: 10px;">
+				<div class="card-body">
+				  <h5 class="card-title">Venkat Gudipati</h5>
+				  <p class="card-text">Founder & CEO</p>
+				  <a href="#" class="btn btn-primary"><i class="fab fa-linkedin"></i>
+					LinkedIn</a>
+				</div>
+			  </div>
+			</div>
+	
+			<div class="col-md-3 mb-3">
+			  <div class="card">
+				<img src="https://maarifaa.org/wp-content/uploads/2023/09/Shailaja-profile-pic.jpg" class="card-img-top"
+				  alt="Person 1" style="padding: 10px;">
+				<div class="card-body">
+				  <h5 class="card-title">Shailaja Gudipati</h5>
+				  <p class="card-text">Co-Founder</p>
+				  <a href="#" class="btn btn-primary"><i class="fab fa-linkedin"></i>
+					LinkedIn</a>
+				</div>
+			  </div>
+			</div>
+	
+			<div class="col-md-3 mb-3">
+			  <div class="card">
+				<img src="https://maarifaa.org/wp-content/uploads/2023/09/WhatsApp-Image-2023-08-11-at-15.58.55.jpg"
+				  class="card-img-top" alt="Person 1" style="padding: 10px;">
+				<div class="card-body">
+				  <h5 class="card-title">Ravi Teja Veligatla</h5>
+				  <p class="card-text">Co-Founder</p>
+				  <a href="#" class="btn btn-primary"><i class="fab fa-linkedin"></i>
+					LinkedIn</a>
+				</div>
+			  </div>
+			</div>
+	
+			<div class="col-md-3 mb-3">
+			  <div class="card">
+				<img
+				  src="https://maarifaa.org/wp-content/uploads/elementor/thumbs/Vinod-Photo-qcoogtes491c46fon3wwyplz6kyj0c65ihbw38ysrc.png"
+				  class="card-img-top" alt="Person 1" style="padding: 10px;">
+				<div class="card-body">
+				  <h5 class="card-title">Vinod Kumar</h5>
+				  <p class="card-text">Finace Head</p>
+				  <a href="#" class="btn btn-primary"><i class="fab fa-linkedin"></i>
+					LinkedIn</a>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-3 mb-3">
+			  <div class="card">
+				<img src="https://maarifaa.org/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-20-at-16.35.24.jpg"
+				  class="card-img-top" alt="Person 1" style="padding: 10px;">
+				<div class="card-body">
+				  <h5 class="card-title">Ghea Sandian Mawen</h5>
+				  <p class="card-text">Community Manager</p>
+				  <a href="#" class="btn btn-primary"><i class="fab fa-linkedin"></i>
+					LinkedIn</a>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-3 mb-3">
+			  <div class="card">
+				<img src="https://maarifaa.org/wp-content/uploads/2023/10/WhatsApp-Image-2023-10-18-at-23.04.53-4.jpeg"
+				  class="card-img-top" alt="Person 1" style="padding: 10px;">
+				<div class="card-body">
+				  <h5 class="card-title">Eva Karra</h5>
+				  <p class="card-text">Web Developer</p>
+				  <a href="#" class="btn btn-primary"><i class="fab fa-linkedin"></i>
+					LinkedIn</a>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-3 mb-3">
+			  <div class="card">
+				<img src="https://maarifaa.org/wp-content/uploads/2023/10/WhatsApp-Image-2023-10-18-at-21.52.44-1.jpg"
+				  class="card-img-top" alt="Person 1" style="padding: 10px;">
+				<div class="card-body">
+				  <h5 class="card-title">Haoua Saleh</h5>
+				  <p class="card-text">Community Manager - India</p>
+				  <a href="#" class="btn btn-primary"><i class="fab fa-linkedin"></i>
+					LinkedIn</a>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-3 mb-3">
+			  <div class="card">
+				<img src="https://maarifaa.org/wp-content/uploads/2023/10/DSC_5460-1-2029x2048.jpg" class="card-img-top"
+				  alt="Person 1" style="padding: 10px;">
+				<div class="card-body">
+				  <h5 class="card-title">Tayoh Vedian Ngafor</h5>
+				  <p class="card-text">Community Manager - India </p>
+				  <a href="#" class="btn btn-primary"><i class="fab fa-linkedin"></i>
+					LinkedIn</a>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		</div>
+	
+		<div class="container my-5 p-5" style="background-color:#ededed;">
+		  <div class="row">
+			<div class="col-12">
+			  <div class="text-center">
+				<h5 class="my-4">Our Advisors</h5>
+				<p>Our diverse team of advisors at
+				  Maarifaa brings together individuals with expertise in a wide range of backgrounds and disciplines, all
+				  driven by a shared mission: to empower individuals like you. We are dedicated to making a global impact by
+				  transforming lives!</p>
+			  </div>
+			  <div class="row justify-content-center">
+				<div class="col-md-3 mb-3">
+				  <div class="card">
+					<img
+					  src="https://maarifaa.org/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2023-10-01-at-20.02.48-qd87xxlbgx7opw0x6mxi3pthsqj2zqbobilzoptf24.jpeg"
+					  class="card-img-top" alt="Person 1" style="padding: 10px;">
+					<div class="card-body">
+					  <h5 class="card-title">Subba Raju Pericherla</h5>
+					  <p class="card-text">Entrepreneur, Startup Evangelist</p>
+					  <a href="#" class="btn btn-primary"><i class="fab fa-linkedin"></i> LinkedIn</a>
+					</div>
+				  </div>
+				</div>
+	
+				<div class="col-md-3 mb-3">
+				  <div class="card">
+					<img
+					  src="https://maarifaa.org/wp-content/uploads/elementor/thumbs/5-q9p1rg4okelwku9e0o32y2tmt45ck88r3jzrz1wakc.png"
+					  class="card-img-top" alt="Person 1" style="padding: 10px;">
+					<div class="card-body">
+					  <h5 class="card-title">Hari Pratap</h5>
+					  <p class="card-text">Business Mentor, Strategist</p>
+					  <a href="#" class="btn btn-primary"><i class="fab fa-linkedin"></i> LinkedIn</a>
+					</div>
+				  </div>
+				</div>
+	
+				<div class="col-md-3 mb-3">
+				  <div class="card">
+					<img
+					  src="https://maarifaa.org/wp-content/uploads/elementor/thumbs/raghu-profile-pic-qfg723vmqvr1019on4pcyglxhpvbrie5acm8pdmvlo.jpg"
+					  class="card-img-top" alt="Person 1" style="padding: 10px;">
+					<div class="card-body">
+					  <h5 class="card-title">Raghu Gudipati</h5>
+					  <p class="card-text">Program Strategy, Execution</p>
+					  <a href="#" class="btn btn-primary"><i class="fab fa-linkedin"></i> LinkedIn</a>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	
+		<div class="container">
+		  <div class="row">
+			<div class="col-12">
+			  <div class="text-center">
+				<h5>OUR PARTNERS</h5>
+				<p class="mx-5">Together, we are on a mission to
+				  create a meaningful global impact by enriching and transforming lives through our collaborative efforts.
+				</p>
+			  </div>
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="col-md-3 mb-3">
+			  <div class="card">
+				<img
+				  src="https://maarifaa.org/wp-content/uploads/elementor/thumbs/Untitled-design-qd6dljkrx1jtq8poxebl4q7pz26jt4s3qvua5dlkso.png"
+				  class="card-img-top" alt="Image 1" style="padding: 10px;">
+				<div class="card-body">
+				  <h5 class="card-title">Branding & Communication Partner</h5>
+				  <a href="#" class="btn btn-primary"><i class="fab fa-linkedin"></i> LinkedIn</a>
+				</div>
+			  </div>
+			</div>
+	
+			<div class="col-md-3 mb-3">
+			  <div class="card">
+				<img
+				  src="https://maarifaa.org/wp-content/uploads/elementor/thumbs/Untitled-design-1-qd6fgcxrq30l0dnrrs1vvd8a42utyl17xl9t8gj4i0.png"
+				  class="card-img-top" alt="Image 2" style="padding: 10px;">
+				<div class="card-body">
+				  <h5 class="card-title">Knowledge Partner</h5>
+				  <a href="#" class="btn btn-primary"><i class="fab fa-linkedin"></i> LinkedIn</a>
+				</div>
+			  </div>
+			</div>
+	
+			<div class="col-md-3 mb-3">
+			  <div class="card">
+				<img
+				  src="https://maarifaa.org/wp-content/uploads/elementor/thumbs/2-qd6doc5i8bdi8inlm3so1iu1jaetoqvdspn8hzggaw.png"
+				  class="card-img-top" alt="Image 3" style="padding: 10px;">
+				<div class="card-body">
+				  <h5 class="card-title">Knowledge Partner</h5>
+				  <a href="#" class="btn btn-primary"><i class="fab fa-linkedin"></i> LinkedIn</a>
+				</div>
+			  </div>
+			</div>
+	
+			<div class="col-md-3 mb-3">
+			  <div class="card">
+				<img
+				  src="https://maarifaa.org/wp-content/uploads/elementor/thumbs/3-qd6e4ywp5s55o4hvhsm0ntqnxqfmvxwef17j78so7c.png"
+				  class="card-img-top" alt="Image 4" style="padding: 10px;">
+				<div class="card-body">
+				  <h5 class="card-title"></h5>
+				  <a href="#" class="btn btn-primary"><i class="fab fa-linkedin"></i> LinkedIn</a>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+</MasterLayout>
