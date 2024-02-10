@@ -1,0 +1,39 @@
+---
+import MasterLayout from "../layouts/MasterLayout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+    <div class="row">
+		<div class="my-5">
+			<img src="https://maarifaa.org/wp-content/uploads/2023/07/bane.jpg" title="Add a heading" alt="Add a heading" class="img-fluid w-100" alt="logo" class="">
+		</div>
+	</div>
+    <div class="row my-5">
+        <div class="col-md-5 mx-5">
+            <h3>Write to us hello@maarifaa.org</h3>
+            <form class="my-5" action="mailto:hello@maarifaa.org" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone number:</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="query">Query:</label>
+                    <textarea id="query" name="query" class="form-control" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary my-3">Submit</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1903.1436906440267!2d78.35001!3d17.445954!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93a062cd5bb9%3A0x83e60cbf150ea69d!2sCIE%20at%20IIIT%20Hyderabad!5e0!3m2!1sen!2sin!4v1707491915469!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</MasterLayout>
